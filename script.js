@@ -6,31 +6,45 @@ var lowercaseArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
 var specialArr = ["!","@","#","$","^","&","*","(",")","?"];
 
 function generatePassword() {
-  var userInput = prompt("Choose how Many Characters do you want your pasword to be");
+  var password;
+  var allCharactersArr = [];
+  var userInput = prompt("Choose how many characters you want your password to be");
 
   if (userInput < 8) {
-    alert("Password too short! Must be at least 8 characters!");
+    alert("Password is too short! Must be at least 8 characters!");
     return generatePassword();
   }
 
-  else if (userInput > 128) {
+  if (userInput > 128) {
     alert("Password is too long! Must be 128 characters or less!");
     return generatePassword();
   }
 
-  else if (isNaN(userInput)) {
+  if (isNaN(userInput)) {
     alert(userInput + " is not a number!");
     return generatePassword();
   }
 
-  else {
-    alert("Your password will be " + userInput + " characters long");
-    var userNumConf = confirm("Would you like to add numbers?");
-    var userUpperConf = confirm("Would you like to add uppercase letters?");
-    var userLowerConf = confirm("Would you like to add lowercase letters?");
-    var userSpecialConf = confirm("Would you like to add special characters?");
-    console.log(userNumConf, userUpperConf, userLowerConf, userSpecialConf);
+  alert("Your password will be " + userInput + " characters long");
+
+  var userNumConf = confirm("Would you like to add numbers?");
+  var userUpperConf = confirm("Would you like to add uppercase letters?");
+  var userLowerConf = confirm("Would you like to add lowercase letters?");
+  var userSpecialConf = confirm("Would you like to add special characters?");
+
+  if (userNumConf === true) {
+    allCharactersArr = allCharactersArr.concat(numberArr);
   }
+  if (userUpperConf === true) {
+    allCharactersArr = allCharactersArr.concat(uppercaseArr);
+  }
+  if (userLowerConf === true) {
+    allCharactersArr = allCharactersArr.concat(lowercaseArr);
+  }
+  if (userSpecialConf === true) {
+    allCharactersArr =allCharactersArr.concat(specialArr);
+  }
+  console.log(allCharactersArr);
 }
 // Write password to the #password input
 function writePassword() {
