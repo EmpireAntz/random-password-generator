@@ -6,7 +6,7 @@ var lowercaseArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
 var specialArr = ["!","@","#","$","^","&","*","(",")","?"];
 
 function generatePassword() {
-  var password;
+  var password = [];
   var allCharactersArr = [];
   var userInput = prompt("Choose how many characters you want your password to be");
 
@@ -42,9 +42,16 @@ function generatePassword() {
     allCharactersArr = allCharactersArr.concat(lowercaseArr);
   }
   if (userSpecialConf === true) {
-    allCharactersArr =allCharactersArr.concat(specialArr);
+    allCharactersArr = allCharactersArr.concat(specialArr);
   }
   console.log(allCharactersArr);
+
+  for (var i = 0; i < userInput; i++) {
+    var randomArrIndex = Math.floor(Math.random() * allCharactersArr.length);
+    password.push(allCharactersArr[randomArrIndex]);
+  }
+  console.log(password);
+  return password.join("");
 }
 // Write password to the #password input
 function writePassword() {
