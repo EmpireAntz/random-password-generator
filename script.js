@@ -21,11 +21,11 @@ function generatePassword() {
   }
 
   if (isNaN(userInput)) {
-    alert(userInput + " is not a number!");
+    alert('"' + userInput + '"' + " is not a number!");
     return generatePassword();
   }
 
-  alert("Your password will be " + userInput + " characters long");
+  alert("Your password will be " + userInput + " characters long.");
 
   var userNumConf = confirm("Would you like to add numbers?");
   var userUpperConf = confirm("Would you like to add uppercase letters?");
@@ -43,6 +43,10 @@ function generatePassword() {
   }
   if (userSpecialConf === true) {
     allCharactersArr = allCharactersArr.concat(specialArr);
+  }
+  if (allCharactersArr == 0) {
+    alert("Password must include at least one character type!");
+    return generatePassword();
   }
   console.log(allCharactersArr);
 
