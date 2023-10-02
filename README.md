@@ -28,14 +28,14 @@ Generates a random and seure password based on your preferences.
 
 ## Images 
 
-![landing page](Assets/image-4.png)
-![character prompt](Assets/image-5.png)
-![lenth chosen](Assets/image-6.png)
-![number confirm](Assets/image-7.png)
-![upper confirm](Assets/image-8.png)
-![lower confirm](Assets/image-9.png)
-![special confirm](Assets/image-10.png)
-![password generated](Assets/image-11.png)
+![landing page](assets/images/image-4.png)
+![character prompt](assets/images/image-5.png)
+![lenth chosen](assets/images/image-6.png)
+![number confirm](assets/images/image-7.png)
+![upper confirm](assets/images/image-8.png)
+![lower confirm](assets/images/image-9.png)
+![special confirm](assets/images/image-10.png)
+![password generated](assets/images/image-11.png)
 
 ## Website Link
 
