@@ -39,4 +39,4 @@ Generates a random and seure password based on your preferences.
 
 ## Website Link
 
-https://empireantz.github.io/week-3-challenge/
+https://empireantz.github.io/random-password-generator/
